@@ -10,12 +10,19 @@
   display: flex;
 }
 .imgContainer {
+  display: flex;
+  flex-direction:column;
+  place-items:inherit;
+  justify-items: center;
   width: 90%;
   height: 400px;
   position: relative;
 }
 .img {
-  object-fit: cover;
+  object-fit: cover;  display: flex;
+  flex-direction:column;
+  place-items:inherit;
+  justify-items: center;
 }
 .date {
   font-size: 12px;

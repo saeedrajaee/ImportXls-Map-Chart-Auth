@@ -21,7 +21,7 @@ export default function LibraryCard({ librarys }) {
           <div className={styles.top}>
             <div className={styles.imgContainer}>
               <Image
-                src={`${API_URL}/librarys/${library.id}.jpg`}
+                src={`${API_URL}/${library.id}.jpg`}
                 alt=""
                 fill
                 className={styles.img}
@@ -32,7 +32,7 @@ export default function LibraryCard({ librarys }) {
           <div className={styles.bottom}>
             <h1 className={styles.title}>{library.name}</h1>
             <p className={styles.desc}>{library.description}</p>
-            <Link className={styles.link} href={`/library/`}>
+            <Link className={styles.link} href={`${API_URL}/${library.id}.jpg`} target="_blank">
               READ MORE
             </Link>
           </div>
@@ -41,22 +41,3 @@ export default function LibraryCard({ librarys }) {
     </div>
   );
 }
-
-// export default function PostCard({post}) {
-
-//   return (
-//     <div className={styles.container}>
-//       <div className={styles.top}>
-//         <div className={styles.imgContainer}>
-//           <Image src="/a.jpg" alt="" fill className={styles.img} />
-//         </div>
-//         <span className={styles.date}>01.01.2024</span>
-//       </div>
-//       <div className={styles.bottom}>
-//         <h1 className={styles.title}>{post.title}</h1>
-//         <p className={styles.desc}>{post.desc}</p>
-//         <Link className={styles.link} href={`/blog/${post.slug}`}>READ MORE</Link>
-//       </div>
-//     </div>
-//   );
-// }
